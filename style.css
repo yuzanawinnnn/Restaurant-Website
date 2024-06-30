@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root{
-    --green: #27ae60;
-    --black: #192a56;
-    --light-color: #666;
-    --beige: #CAAE82;
+    --green: yellow; /*review star color*/
+    --black: #A6A9AC; /*dish name color*/
+    --light-color: white;/*some small p*/
+    --beige: #222D3B;
+    --beige1: #CAAE82; /*button beige color*/
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 *{
-    font-family: 'Nunito', sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin: 0; padding: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -16,6 +18,7 @@
     text-transform: capitalize;
     transition: all .2s linear;
 }
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -26,7 +29,7 @@ section{
     padding:2rem 9%;
 }
 section:nth-child(even){
-    background:#eee;
+    background:#090C0F;
 }
 .sub-heading{
     text-align: center;
@@ -37,7 +40,7 @@ section:nth-child(even){
 }
 .heading{
     text-align: center;
-    color: var(--beige);
+    color: #919497;
     font-size: 2rem;
     padding-top: 1rem;
 }
@@ -45,13 +48,15 @@ section:nth-child(even){
     margin-top: 1rem;
     display: inline-block;
     font-size:1.2rem;
-    color: black;
+    color: white;
     background: var(--beige);
     cursor: pointer;
     padding: 2rem 3.5rem;
+    outline:1px solid var(--beige1);
+    outline-offset: 4px;
 }
 .btn:hover{
-    background: var(--black);
+    background: var(--beige1);
     letter-spacing: .1rem;
 }
 header{
@@ -59,8 +64,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    /* background: #fff; */
-    background: #212121;
+    background: #090C0F;
     padding: 1rem 7%;
     display: flex;
     align-items: center;
@@ -70,13 +74,13 @@ header{
 }
 
 header .logo{
-    color: var(--beige);
+    color: #919497;
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
 header .logo i{
-    color: var(--beige);
+    color: #919497;
 }
 header .navbar a{
     font-size: 1.7rem;
@@ -107,7 +111,7 @@ header .icons a{
 header .icons i:hover,
 header .icons a:hover{
     color: #fff;
-    background: var(--green);
+    background: #C19977;
     transform: rotate(360deg);
 }
 header .icons #menu-bars{
@@ -161,7 +165,7 @@ header .icons #menu-bars{
     font-size: 5rem;
 }
 section{
-    background: #0C0D0B;
+    background: #0E1317;
 }
 .home .home-slider .slide{
     display: flex;
@@ -181,20 +185,25 @@ section{
 }
 .home .home-slider .slide .content span{
     font-size: 2.5rem;
+    font-weight: thin;
 }
 .home .home-slider .slide .content h3{
     font-size: 7rem;
+    font-weight: thin;
 }
 .home .home-slider .slide .content p{
     color: var(--light-color);
     font-size: 2rem;
     padding:.5rem 0;
-    line-height: 1.5;;
+    line-height: 1.5;
+
 }
 
 .content span, 
-.content h3, 
-.content p{color: #fff;}
+.content h3
+{color: var(--beige1);}
+
+.content p{color: white;}
 
 .image img{
     border-radius: 10px;
@@ -214,7 +223,7 @@ section{
 }
 .dishes .box-container .box{
     padding: 2.5rem;
-    box-shadow: var(--box-shadow);
+    /*box-shadow: var(--box-shadow);*/
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -233,7 +242,7 @@ section{
 }
 .dishes .box-container .box .fa-heart:hover,
 .dishes .box-container .box .fa-eye:hover{
-    background: var(--green);
+    background: #C19977;
 }
 .dishes .box-container .box .fa-heart{
     right: 1.2rem;
@@ -265,7 +274,6 @@ section{
 }
 .dishes .box-container .box span{
     color: var(--black);
-    font-weight: bolder;
     margin-right: 1rem;
     font-size: 2.5rem;
 }
@@ -315,7 +323,7 @@ section{
 }
 .about .row .content .icons-container .icons i{
     font-size: 2.5rem;
-    color: var(--green);
+    color: black;
 }
 .about .row .content .icons-container .icons span{
     font-size: 1.5rem;
@@ -326,12 +334,12 @@ section{
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     grid: 1.5rem;
 }
-.menu .box-container .box{
+/*.menu .box-container .box{
     background: #fff;
     border: none;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-}
+}*/
 .menu .box-container .box .image{
     height: 35rem;
     width: 100%;
@@ -358,7 +366,7 @@ section{
     color: var(--black);
 }
 .menu .box-container .box .image .fa-heart:hover{
-    background-color: var(--green);
+    background-color: #C19977;
     color: #fff;
 }
 .menu .box-container .box .content{
@@ -383,7 +391,7 @@ section{
     line-height: 1.5;
 }
 .menu .box-container .box .content .price{
-    color: var(--green);
+    color: #C19977;
     margin-left: 1rem;
     font-size: 2.5rem;
 }
